@@ -46,7 +46,7 @@ const Charts = () => {
     return <>
         <div className="flex gap-4 flex-col lg:flex-row">
             <div className="w-full lg:w-1/3 h-[450px]">
-                {/* <CountChart /> */}
+                <CountChart />
             </div>
             <div className="w-full lg:w-2/3 h-[450px]">
                 {/* <AttendanceChart /> */}
