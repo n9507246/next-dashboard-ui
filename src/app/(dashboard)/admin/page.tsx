@@ -1,6 +1,7 @@
 import UserCard from '@/components/UserCart';
 import { ReactNode } from 'react';
 import { CountChart, AttendanceChart, FinanceChart } from '@/components/Charts/Charts';
+import EventCalendar from '@/components/EventCalendar/EventCalendar';
 
 
 const AdminPage = () => {
@@ -11,7 +12,7 @@ const AdminPage = () => {
                 <Charts/>
             </Left>
             <Right>
-                <div>rightSide</div>
+                <EventCalendar/>
             </Right>
         </Wrapper>
     )
@@ -30,7 +31,7 @@ const Left = ({ children }: { children: ReactNode }) => {
 }
 
 const Right = ({ children }: { children: ReactNode }) => {
-    return <div className="w-full lg:w-1/3">{children}</div>
+    return <div className="w-full lg:w-1/3 flex flex-col gap-8">{children}</div>
 }
 
 const UserCardList = () => {
