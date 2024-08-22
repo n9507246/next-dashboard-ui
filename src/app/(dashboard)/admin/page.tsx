@@ -1,6 +1,6 @@
 import UserCard from '@/components/UserCart';
 import { ReactNode } from 'react';
-import { CountChart } from '@/components/Charts/Charts';
+import { CountChart, AttendanceChart, FinanceChart } from '@/components/Charts/Charts';
 
 
 const AdminPage = () => {
@@ -53,7 +53,7 @@ const Charts = () => {
             </div>
         </div>
         <div className="w-full h-[500px]">
-            {/* <FinanceChart /> */}
+            <FinanceChart />
         </div>
     </>
 }
