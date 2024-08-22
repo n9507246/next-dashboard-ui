@@ -49,7 +49,7 @@ const Charts = () => {
                 <CountChart />
             </div>
             <div className="w-full lg:w-2/3 h-[450px]">
-                {/* <AttendanceChart /> */}
+                <AttendanceChart />
             </div>
         </div>
         <div className="w-full h-[500px]">
