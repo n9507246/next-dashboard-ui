@@ -11,7 +11,11 @@ type EventData = {
     description: string;
 };
 
-const EventList = ({events}:{events:Array<EventData>}) => {
+interface PropsEventList {
+    events: Array<EventData>
+}
+
+const EventList: React.FC<PropsEventList>= ({events}) => {
     return <>
         <Header.Area>
             <Header.Title/>
