@@ -1,22 +1,19 @@
 import Image from "next/image";
-import { ReactNode } from 'react';
+import { Wrapper as NanbarWrapper, Wrapper as ControlPanel } from "@/components/Wrapper";
 
 export default function Navbar(){
     return (
-        <Wrapper>
+        <NanbarWrapper className=" flex items-center justify-between p-4">
             <Search/>
-            <ControlPanel>
+            <ControlPanel className="flex items-center gap-6 justify-end w-full">
                 <BtnMessage/>
                 <BtnAnnouncement/>
                 <User/>
             </ControlPanel>
-        </Wrapper>
+        </NanbarWrapper>
     )
 }
 
-const Wrapper = ({ children }: { children: ReactNode }) => {
-    return <div className=" flex items-center justify-between p-4">{children}</div>
-}
 
 const Search = () => {
     return (
@@ -48,16 +45,6 @@ const User = () => {
         <Image src='/avatar.png' alt="" width={36} height={36} className=" rounded-full"/>
     </>
 }
-
-const ControlPanel = ({ children }: { children: ReactNode }) => {
-    return (
-      <div className="flex items-center gap-6 justify-end w-full">
-        {children}
-      </div>
-    );
-  };
-
-
 
 
 
