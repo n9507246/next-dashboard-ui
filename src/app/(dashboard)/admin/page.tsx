@@ -16,7 +16,7 @@ const AdminPage = () => {
                     <UserCard.Item type='parent' />
                     <UserCard.Item type='staff' />
                 </UserCard.List>
-                <Charts.Area>
+                <Charts.Area className='flex flex-row flex-wrap'>
                     <Charts.Count className='mb-2 pr-2' data={dataCountChart}/>
                     <Charts.Attendance className='mb-2' data={dataAttendanceChart}/>
                     <Charts.Finance data={dataFinanceChart}/>
