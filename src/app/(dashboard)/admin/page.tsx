@@ -5,6 +5,7 @@ import {Wrapper as Content, Wrapper as Main, Wrapper as Asside } from '@/compone
 import Events from '@/components/Events';
 import UserCard from '@/components/UserCard';
 import Charts from '@/components/Charts';
+import Announcements from '@/components/Announcements';
 
 
 const AdminPage = () => {
@@ -28,6 +29,10 @@ const AdminPage = () => {
                     <Events.Calendar/> 
                     <Events.List events={events}/>
                 </Events.Area>
+                <Announcements.Area className='bg-white p-4 rounded-md'>
+                    <Announcements.Header/>
+                    <Announcements.List/>
+                </Announcements.Area>
             </Asside>
         </Content>
     )
