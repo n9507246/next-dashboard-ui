@@ -18,7 +18,7 @@ interface MyComponentProps {
 
 export const FinanceChart: React.FC<MyComponentProps> = ({ className = '', data})  => {
     return (
-        <div className={`${className} w-full h-[500px]`}>
+        <div className={className}>
             <div className="bg-white rounded-xl w-full h-full p-4">
                 <div className="flex justify-between items-center">
                     <h1 className="text-lg font-semibold">Finance</h1>

@@ -11,7 +11,7 @@ interface MyComponentProps {
 
 const CountChart: React.FC<MyComponentProps> = ({ className = '', data}) => {
   return (
-    <div className={`${className} w-full lg:w-1/3 h-[450px]`}>
+    <div className={className}>
       <div className='bg-white rounded-xl w-full h-full p-4'>
         {/* TITLE */}
         <div className="flex justify-between items-center">

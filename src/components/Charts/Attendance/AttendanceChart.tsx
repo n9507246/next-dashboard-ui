@@ -20,7 +20,7 @@ interface MyComponentProps {
 const AttendanceChart: React.FC<MyComponentProps> = ({ className = '', data})  => {
     return (
        
-        <div className={`${className} w-full lg:w-2/3 h-[450px]`}>
+        <div className={className}>
             <div className="bg-white rounded-lg p-4 h-full">
                 <div className="flex justify-between items-center">
                 <h1 className="text-lg font-semibold">Attendance</h1>

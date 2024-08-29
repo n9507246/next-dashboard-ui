@@ -1,6 +1,7 @@
 
 import { ReactNode } from 'react';
 import { dataAttendanceChart, dataCountChart, dataFinanceChart, events } from '@/lib/fakeData';
+
 import Events from '@/components/Events';
 import UserCard from '@/components/UserCard';
 import Charts from '@/components/Charts';
@@ -17,9 +18,9 @@ const AdminPage = () => {
                     <UserCard.Item type='staff' />
                 </UserCard.List>
                 <Charts.Area className='flex flex-row flex-wrap'>
-                    <Charts.Count className='mb-2 pr-2' data={dataCountChart}/>
-                    <Charts.Attendance className='mb-2' data={dataAttendanceChart}/>
-                    <Charts.Finance data={dataFinanceChart}/>
+                    <Charts.Count className='w-full lg:w-1/3 h-[450px] mb-2 pr-2' data={dataCountChart}/>
+                    <Charts.Attendance className=' w-full lg:w-2/3 h-[450px] mb-2' data={dataAttendanceChart}/>
+                    <Charts.Finance className='w-full h-[500px]' data={dataFinanceChart}/>
                 </Charts.Area> 
             </Main>
             <Asside>
