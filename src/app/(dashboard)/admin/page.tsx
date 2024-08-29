@@ -1,15 +1,22 @@
-import UserCard from '@/components/UserCart';
+
 import { ReactNode } from 'react';
 import { CountChart, AttendanceChart, FinanceChart } from '@/components/Charts/Charts';
 
 import Events from '@/components/Events';
+import UserCard from '@/components/UserCard';
+
 import { events } from '@/lib/fakeData';
 
 const AdminPage = () => {
     return (
         <Content>
             <Main>
-                <UserCardList/>
+                <UserCard.List>
+                    <UserCard.Item type='student' />
+                    <UserCard.Item type='teacher' />
+                    <UserCard.Item type='parent' />
+                    <UserCard.Item type='staff' />
+                </UserCard.List>
                 <Charts/>
             </Main>
             <Asside>
@@ -40,14 +47,6 @@ const Asside = ({ children }: { children: ReactNode }) => {
     return <div className="w-full lg:w-1/3 flex flex-col gap-8">{children}</div>
 }
 
-const UserCardList = () => {
-    return <div className="flex gap-4 justify-between flex-wrap">
-        <UserCard type='student'/>
-        <UserCard type='teacher'/>
-        <UserCard type='parent'/>
-        <UserCard type='staff'/>
-    </div>
-}
 
 const Charts = () => {
     return <>
