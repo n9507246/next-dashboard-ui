@@ -1,11 +1,10 @@
 
 import { ReactNode } from 'react';
-import { CountChart, AttendanceChart, FinanceChart } from '@/components/Charts/Charts';
-
+import { dataAttendanceChart, dataCountChart, dataFinanceChart, events } from '@/lib/fakeData';
 import Events from '@/components/Events';
 import UserCard from '@/components/UserCard';
+import Charts from '@/components/Charts';
 
-import { events } from '@/lib/fakeData';
 
 const AdminPage = () => {
     return (
@@ -17,7 +16,11 @@ const AdminPage = () => {
                     <UserCard.Item type='parent' />
                     <UserCard.Item type='staff' />
                 </UserCard.List>
-                <Charts/>
+                <Charts.Area>
+                    <Charts.Count className='mb-2 pr-2' data={dataCountChart}/>
+                    <Charts.Attendance className='mb-2' data={dataAttendanceChart}/>
+                    <Charts.Finance data={dataFinanceChart}/>
+                </Charts.Area> 
             </Main>
             <Asside>
                 <Events.Area>
@@ -48,18 +51,3 @@ const Asside = ({ children }: { children: ReactNode }) => {
 }
 
 
-const Charts = () => {
-    return <>
-        <div className="flex gap-4 flex-col lg:flex-row">
-            <div className="w-full lg:w-1/3 h-[450px]">
-                <CountChart />
-            </div>
-            <div className="w-full lg:w-2/3 h-[450px]">
-                <AttendanceChart />
-            </div>
-        </div>
-        <div className="w-full h-[500px]">
-            <FinanceChart />
-        </div>
-    </>
-}
