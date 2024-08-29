@@ -24,7 +24,7 @@ const AdminPage = () => {
                 </Charts.Area> 
             </Main>
             <Asside>
-                <Events.Area>
+                <Events.Area className='bg-white p-4 rounded-md'>
                     <Events.Calendar/> 
                     <Events.List events={events}/>
                 </Events.Area>

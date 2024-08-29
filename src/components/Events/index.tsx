@@ -1,11 +1,19 @@
-import { ReactNode } from 'react';
 import Calendar from './Calendar';
 import List from './List';
 
+
+import { ReactNode } from 'react';
+
+interface WrapperProps {
+    className?: string;
+    children: ReactNode
+}
+
+const Wrapper: React.FC<WrapperProps> = ({ children, className }) => <div className={className}> {children} </div>
+
+
 export default {
-    Area:( { children }: { children: ReactNode }  ) => {
-        return <div className="bg-white p-4 rounded-md">{children}</div>
-    },
-    Calendar:()=> <Calendar/>,
-    List: (props : any) => <List events={props.events} />
+    Area: Wrapper,
+    Calendar: Calendar,
+    List: List
 }
