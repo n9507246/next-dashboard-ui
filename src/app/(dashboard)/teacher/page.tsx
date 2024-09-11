@@ -8,7 +8,7 @@ import Announcements from '@/components/Announcements';
 
 const TeacherPage = () => {
     return (
-        <Content className='p-4 flex gap-4 flex-col xl:flex-row '>
+        <Content className='p-4 flex flex-1 gap-4 flex-col xl:flex-row '>
         <Main className='w-full xl:w-2/3 flex flex-col gap-8'>
             <Shedule.Area className='h-full bg-white p-4 rounded-md'>
                 <Shedule.Header>Shedule</Shedule.Header>
