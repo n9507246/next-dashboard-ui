@@ -10,7 +10,7 @@ export default ( {children} : {children: React.ReactNode} ) => (
           <Navbar.Links menuItems={menuItems} />
       </Navbar.Area>   
 
-      <Content.Area className="bg-[#F7F8FA] overflow-scroll" >
+      <Content.Area className="w-full bg-[#F7F8FA] overflow-scroll" >
           <Content.Header/>
           {children}
       </Content.Area>  
