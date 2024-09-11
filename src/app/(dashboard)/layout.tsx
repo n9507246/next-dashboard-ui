@@ -1,8 +1,4 @@
-
-import Layout from '@/components/Layout/Dashboard';
-import Navbar from '@/components/Layout/Dashboard/Navbar';
-import Content from "@/components/Layout/Dashboard/Content";
-
+import {Layout, Navbar, Content } from '@/components/Layout/Dashboard';
 import { menuItems } from "@/lib/fakeData";
 
 export default ( {children} : {children: React.ReactNode} ) => (
