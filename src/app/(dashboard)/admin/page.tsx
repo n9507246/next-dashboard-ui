@@ -29,10 +29,7 @@ const AdminPage = () => {
                     <Events.Calendar/> 
                     <Events.List events={events}/>
                 </Events.Area>
-                <Announcements.Area className='bg-white p-4 rounded-md'>
-                    <Announcements.Header/>
-                    <Announcements.List/>
-                </Announcements.Area>
+                <Announcements/>
             </Asside>
         </Content>
     )

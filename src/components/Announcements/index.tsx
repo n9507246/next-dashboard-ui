@@ -1,9 +1,8 @@
-import { Wrapper } from "../Wrapper";
-import Header from "./Header";
-import List from "./List";
+import Announcements from '@/components/Announcements/Components';
 
-export default {
-    Area: Wrapper,
-    Header: Header,
-    List: List
-}
+export default () => (
+    <Announcements.Area className='bg-white p-4 rounded-md'>
+        <Announcements.Header/>
+        <Announcements.List/>
+    </Announcements.Area>
+)

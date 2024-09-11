@@ -2,7 +2,7 @@
 import { calendarEvents } from '@/lib/data';
 import {Wrapper as Content, Wrapper as Main, Wrapper as Asside } from '@/components/Wrapper';
 
-import Announcements from '@/components/Announcements';
+import Announcements from '@/components/Announcements/Components';
 import Shedule from '@/components/Shedule';
 
 

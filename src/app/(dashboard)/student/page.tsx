@@ -6,7 +6,7 @@ import {Wrapper as Content, Wrapper as Main, Wrapper as Asside } from '@/compone
 
 import Shedule from '@/components/Shedule';
 import Events from '@/components/Events';
-import Announcements from '@/components/Announcements';
+import Announcements from '@/components/Announcements/Components';
 
 
 const AdminPage = () => {
