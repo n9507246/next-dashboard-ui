@@ -1,32 +1,25 @@
-import Link from "next/link";
-import Image from 'next/image';
-import Menu from "@/components/Menu";
-import Navbar from "@/components/Navbar";
 
-export default function DashboardLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    
-    <div >
-      <div className="h-screen flex">
-        <div className=" w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4 h-screen  overflow-y-auto" >
-          <Link href='/' className="flex items-center justify-center lg:justify-start gap-2">
-            <Image src='/logo.png' alt='logo' width={32} height={32} />
-            <span className="hidden lg:block font-bold">MySchool</span>
-          </Link>  
-          <Menu/>
-        </div>  
+import Layout from '@/components/Layout/Dashboard';
+import Navbar from '@/components/Layout/Dashboard/Navbar';
+import Content from "@/components/Layout/Dashboard/Content";
 
-        <div className=" w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#F7F8FA] overflow-scroll" >
-            <Navbar/>
-            {children}
-        </div>  
+import { menuItems } from "@/lib/fakeData";
 
-      </div>
-    </div>
-    
-  );
-}
+export default ( {children} : {children: React.ReactNode} ) => (
+  
+  <Layout.Area className="h-screen flex">
+      
+      <Navbar.Area className=" w-[14%] md:w-[8%] lg:w-[16%] xl:w-[14%] p-4 h-screen overflow-y-auto" >
+          <Navbar.BrandIcon/>
+          <Navbar.Links menuItems={menuItems} />
+      </Navbar.Area>   
+
+      <Content.Area className=" w-[86%] md:w-[92%] lg:w-[84%] xl:w-[86%] bg-[#F7F8FA] overflow-scroll" >
+          <Content.Header/>
+          {children}
+      </Content.Area>  
+
+  </Layout.Area>
+
+);
+
