@@ -1,7 +1,27 @@
-const ParentPage = () => {
+
+import { shedule } from '@/lib/fakeData';
+import {Wrapper as Content, Wrapper as Main, Wrapper as Asside } from '@/components/Wrapper';
+import Shedule from '@/components/Shedule';
+import Announcements from '@/components/Announcements';
+
+
+const TeacherPage = () => {
     return (
-        <div className="">ParentPage</div>
+        <Content className='p-4 flex flex-1 gap-4 flex-col xl:flex-row '>
+        <Main className='w-full xl:w-2/3 flex flex-col gap-8'>
+            <Shedule.Area className='h-full bg-white p-4 rounded-md'>
+                <Shedule.Header>Shedule(Ivan Ivanov)</Shedule.Header>
+                <Shedule.Calendar events={shedule}/>
+            </Shedule.Area>
+        </Main>
+        <Asside className='w-full xl:w-1/3 flex flex-col gap-8'>
+            <Announcements.Area className='bg-white p-4 rounded-md'>
+                <Announcements.Header/>
+                <Announcements.List/>
+            </Announcements.Area>
+        </Asside>
+    </Content>
     )
 }
 
-export default ParentPage;
+export default TeacherPage;
