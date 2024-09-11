@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { Wrapper } from '@/components/Wrapper';
-import { Calendar, View, Views, momentLocalizer } from 'react-big-calendar'
+import { Calendar as ReactBigCalendar, View, Views, momentLocalizer } from 'react-big-calendar'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import './style.css'
 
@@ -20,14 +20,14 @@ interface PropsBigCalendar {
   events: Array<CalendarEvent>
 }
 
-const BigCalendar: React.FC<PropsBigCalendar> = ({className, events}) => {
+const Calendar: React.FC<PropsBigCalendar> = ({className, events}) => {
 
     const [view, setView] = useState<View>(Views.WORK_WEEK);
     const handleOnChangeView = (selectedView: View) => { setView(selectedView); };
-    console.log(events)
+    
     return (
         <Wrapper className={className + ' h-full'}>
-            <Calendar
+            <ReactBigCalendar
                 localizer={localizer}
                 events={events}
                 startAccessor="start"
@@ -43,4 +43,4 @@ const BigCalendar: React.FC<PropsBigCalendar> = ({className, events}) => {
     );
 };
 
-export default BigCalendar;
+export default Calendar;

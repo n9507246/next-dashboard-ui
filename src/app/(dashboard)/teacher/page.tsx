@@ -1,19 +1,16 @@
 
-import { shedule, events } from '@/lib/fakeData';
+import { calendarEvents } from '@/lib/data';
 import {Wrapper as Content, Wrapper as Main, Wrapper as Asside } from '@/components/Wrapper';
-import Shedule from '@/components/Shedule';
-import Events from '@/components/Events';
+
 import Announcements from '@/components/Announcements';
+import Shedule from '@/components/Shedule';
 
 
 const TeacherPage = () => {
     return (
         <Content className='p-4 flex flex-1 gap-4 flex-col xl:flex-row '>
         <Main className='w-full xl:w-2/3 flex flex-col gap-8'>
-            <Shedule.Area className='h-full bg-white p-4 rounded-md'>
-                <Shedule.Header>Shedule</Shedule.Header>
-                <Shedule.Calendar events={shedule}/>
-            </Shedule.Area>
+            <Shedule title='Shedule' events={calendarEvents}/>
         </Main>
         <Asside className='w-full xl:w-1/3 flex flex-col gap-8'>
             <Announcements.Area className='bg-white p-4 rounded-md'>
