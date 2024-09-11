@@ -1,5 +1,5 @@
 import Table from '@/components/Table/Default'
 
 export default () => (
-    <Table name='All teacher' />
+    <Table /*name='All teacher'*/ />
 )

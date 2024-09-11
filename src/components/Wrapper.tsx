@@ -6,3 +6,5 @@ interface WrapperProps {
 }
 
 export const Wrapper: React.FC<WrapperProps> = ({ children, className }) => <div className={className}> {children} </div>
+
+export default Wrapper;

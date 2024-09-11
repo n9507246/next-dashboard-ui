@@ -6,7 +6,7 @@ import {Wrapper as Content, Wrapper as Main, Wrapper as Asside } from '@/compone
 
 import Shedule from '@/components/Shedule';
 import Events from '@/components/Events';
-import Announcements from '@/components/Announcements/Components';
+import Announcements from '@/components/Announcements';
 
 
 const AdminPage = () => {
@@ -16,14 +16,8 @@ const AdminPage = () => {
                 <Shedule title='Shedule (4A)' events={calendarEvents}/>
             </Main>
             <Asside className='w-full xl:w-1/3 flex flex-col gap-8'>
-                <Events.Area className='bg-white p-4 rounded-md'>
-                    <Events.Calendar/> 
-                    <Events.List events={events}/>
-                </Events.Area>
-                <Announcements.Area className='bg-white p-4 rounded-md'>
-                    <Announcements.Header/>
-                    <Announcements.List/>
-                </Announcements.Area>
+                <Events events={events}/>
+                <Announcements/>
             </Asside>
         </Content>
     )

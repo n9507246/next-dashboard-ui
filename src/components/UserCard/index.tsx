@@ -1,7 +1,6 @@
-import UserCardList from "./List";
-import UserCardItem from "./Item";
 
-export default {
-    List: UserCardList,
-    Item: UserCardItem
-}
+import Components from '@/components/Announcements/Components';
+import DefaultTeamplate from './Templates/Default';
+
+export { Components }
+export default DefaultTeamplate;
