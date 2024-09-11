@@ -11,7 +11,7 @@ const AdminPage = () => {
         <Content className='p-4 flex gap-4 flex-col xl:flex-row '>
             <Main className='w-full xl:w-2/3 flex flex-col gap-8'>
                 <Shedule.Area className='h-full bg-white p-4 rounded-md'>
-                    <Shedule.Header/>
+                    <Shedule.Header>Shedule (4A)</Shedule.Header>
                     <Shedule.Calendar events={shedule}/>
                 </Shedule.Area>
             </Main>

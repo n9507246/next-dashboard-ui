@@ -2,13 +2,14 @@ import React from 'react';
 import { Wrapper } from '@/components/Wrapper';
 
 interface PropsHeader {
-  className?: string
+  className?: string,
+  children: string
 }
 
-const Header: React.FC<PropsHeader> = ({className}) => {
+const Header: React.FC<PropsHeader> = ({className, children}) => {
   return (
     <Wrapper className={className}>
-      <h1 className='text-lx font-semibold'>Shedule (4A)</h1>
+      <h1 className='text-lx font-semibold'>{children}</h1>
     </Wrapper>
   );
 };
