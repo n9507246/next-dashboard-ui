@@ -5,6 +5,9 @@ type SheduleProps ={
     events: any
 }
 
+/**
+ * Расписание(календарь), дефолтный шаблон.
+ */
 export default ({title, events} : SheduleProps) => (
     <Shedule.Area className='h-full bg-white p-4 rounded-md'>
         <Shedule.Header>{title}</Shedule.Header>
