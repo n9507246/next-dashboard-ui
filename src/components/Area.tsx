@@ -8,3 +8,4 @@ interface AreaProps {
 export const Area: React.FC<AreaProps> = ({ children, className }) => <div className={className}> {children} </div>
 
 export default Area;
+export type { AreaProps }
