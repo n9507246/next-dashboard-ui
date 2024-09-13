@@ -1,8 +1,7 @@
 import {Area, AreaProps} from './Area';
 
 
-type ContainterComponents<T> = T & 
-{
+type ContainterComponents<T> = T & {
     /** Обертка компонента*/
     Area: React.FC<AreaProps>
 };
