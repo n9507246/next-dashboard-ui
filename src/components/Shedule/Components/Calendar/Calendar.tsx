@@ -8,7 +8,7 @@ import './style.css'
 import moment from 'moment'
 const localizer = momentLocalizer(moment)
 
-type CalendarEvent = {
+export type CalendarEvent = {
     title: string,    
     allDay: boolean,  
     start: Date,      
@@ -17,6 +17,7 @@ type CalendarEvent = {
 
 interface PropsBigCalendar {
   className?: string
+  /** Массив данных для вывода в календарь*/
   events: Array<CalendarEvent>
 }
 
